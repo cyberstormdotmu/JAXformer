@@ -195,7 +195,7 @@ class MoE(nn.Module):
 
         x = res_shared + expert_outputs
 
-        return expert_outputs, aux
+        return x, aux
 
     def scatter(
         self, x: Array, scores: Array, indices: Array, capacity: int
